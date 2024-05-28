@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap: 10px;
+    font-weight: 17px;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.container>div{
+    flex: 100%;
+}
+
+.subContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    background: #000;
+    border-radius: 3px;
+}
+
+.sidebar{
+    flex: 1;
+    background: green;
+}
+
+.main_container{
+    flex: 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.main_container>div{
+    flex: 100%;
+}
+
+h4{
+    padding: 10px;
+}
+
+.main{
+    min-height: 300px;
+    background: blue;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.content1, .content2, .content3{
+    min-height: 250px;
+    background: blueviolet;
+    flex: 1;
+}
+
+.footer{
+    flex: 100%;
+    min-height: 100px;
+    background: red;
+}
+.sidebar, .main, .content>div{
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+
+@media only screen and (max-width: 768px){
+    .subContainer{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        min-height: 50px;
+    }
+}
+
+
+@media only screen and (max-width: 550px){
+
+    .content>div{
+        flex: 100%;
+    }
+
+    .content1, .content2, .content3{
+        min-height: 170px !important;
+    }
+    
+}

@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --gap: 10px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper, .mainContainer, main, .content2, .content3{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.wrapper{
+    width: 100%;
+    margin: var(--gap);
+}
+
+.wrapper>*{
+    flex: 100%;
+}
+
+h4{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 400;
+    margin: 5px;
+    color: #fff;
+}
+
+nav{
+    min-height: 50px;
+    background: #373737;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+
+aside{
+    flex: 1;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+main{
+    flex: 4;
+}
+
+main>div{
+    flex: 100%;
+}
+
+.div1{
+    min-height: 230px;
+    background: #555;
+}
+
+.content2>div{
+    min-height: 230px;
+    background: #777;
+    flex: 1;
+}
+
+.content3>div{
+    min-height: 190px;
+    background: #999;
+    flex: 1;
+}
+
+.content1>div, .content2>div, .content3>div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 768px){
+    
+    aside{
+        flex: 100%;
+        min-height: 50px;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+    .content2, .content3{
+        flex-direction: column;
+    }
+
+    .content2>div{
+        min-height: 210px;
+    }
+}

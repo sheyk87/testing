@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.container>div{
+    flex: 100%;
+}
+
+.header, .footer, .main, .main2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header>div, .main1, .main2>div, .footer>div{
+    border-radius: 5px;
+}
+
+.header>div{
+    min-height: 110px;
+    background: red;
+}
+
+.div1{
+    flex: 3;
+}
+
+.div2{
+    flex: 2;
+}
+
+
+.main1{
+    flex: 6;
+    background: yellowgreen;
+}
+
+.main2{
+    flex: 7;
+}
+
+.main2>div{
+    flex: 100%;
+    background: mediumorchid;
+    min-height: 230px;
+}
+
+.footer>div{
+    background: darkgreen;
+    min-height: 87px;
+}
+
+.div5, .div7{
+    flex: 3;
+}
+
+.div6{
+    flex: 4;
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .header>div, .footer>div{
+        flex: 100%;
+    }
+
+    .div1{
+        min-height: 130px !important;
+    }
+
+    .div6{
+        min-height: 120px !important;
+    }
+
+    .main1{
+        flex: 100%;
+        min-height: 400px;
+    }
+
+}

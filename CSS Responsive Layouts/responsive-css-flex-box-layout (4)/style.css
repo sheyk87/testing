@@ -1,0 +1,191 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px;
+    gap: 20px;
+    /* min-height: 100vh; */
+}
+
+.container>*, .header>div, .main-content>div, .main>div, .main>div>div, .aside, .aside>div, .footer>div, .footer>div>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container>*{
+    flex-wrap: wrap;
+    flex: 100%;
+    font-size: 25px;
+    color: #fff;
+    border-radius: 5px;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    background: #131419;
+    gap: 10px;
+    padding: 10px;
+}
+
+.header>div{
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    min-height: 100px;
+}
+
+
+.main-content{
+    padding: 0px;
+    gap: 15px;
+}
+.main-content>div{
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.main-content .main{
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    background: #454545;  
+    gap: 10px; 
+}
+
+.main>div{
+    flex: 100%;
+    gap: 10px;
+    
+}
+
+.main>div>div{
+    flex: 1;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    min-height: 200px;
+}
+
+.main-content .aside{
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aside1{
+    background: #0E76AB;
+}
+
+.aside2{
+    background: tomato !important;
+}
+
+
+.aside>div{
+    flex: 1;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 100%;
+    min-height: 74px;
+}
+
+
+
+.footer{
+    background: #0C6E72;
+    min-height: 120px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.footer>div{
+    flex: 1;
+    gap: 10px;
+}
+
+.footer>div>div{
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    min-height: 100px;
+}
+
+
+@media screen and (max-width: 800px){
+    .main{
+        flex: 100% !important;
+    }
+
+    .main>div>div{
+        min-height: 170px;
+    }
+
+    .aside{
+        flex-direction: row !important;
+    }
+
+    .aside>div{
+        min-height: 100px;
+    }
+
+    .footer{
+        flex-direction: column;
+    }
+    .footer>div{
+        width: 100%;
+    }
+
+    .footer>div>div{
+        min-height: 70px;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .container{
+        gap: 10px;
+    }
+
+    .header, .main>div, .footer, .footer>div{
+        flex-direction: column;
+    }
+    .header>div{
+        width: 100%;
+        min-height: 70px;
+    }
+
+    .main-content{
+        gap: 10px;
+    }
+
+    .main>div>div{
+        width: 100%;
+        min-height: 100px;
+    }
+
+    .aside{
+        flex-direction: column !important;
+    }
+
+    .aside>div{
+        min-height: 70px;
+    }
+
+    .footer>div>*{
+        width: 100%;
+        min-height: 70px;
+    }
+    
+}

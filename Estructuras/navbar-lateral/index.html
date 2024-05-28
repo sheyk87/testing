@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinamic Navbar</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <div class="logo-name">Codeativo</div>
+            <i class='bx bx-menu' id="btn-toggle"></i>
+        </div>
+
+
+        <ul class="nav-container">
+            <li class="search">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search">
+                <span class="tooltip">Search</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="links">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="links">Users</span>
+                </a>
+                <span class="tooltip">Users</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-conversation'></i>
+                    <span class="links">Chat</span>
+                </a>
+                <span class="tooltip">Chat</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-chart'></i>
+                    <span class="links">Stadistics</span>
+                </a>
+                <span class="tooltip">Stadistics</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-folder'></i>
+                    <span class="links">Files</span>
+                </a>
+                <span class="tooltip">Files</span>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="links">Setting</span>
+                </a>
+                <span class="tooltip">Setting</span>
+            </li>
+        </ul>
+
+
+        <div class="user">
+            <div class="user-container">
+                <img src="img1.jpg" alt="">
+                <div class="user-details">
+                    <div class="name">Henry Brooks</div>
+                    <div class="job">Frontend Dev</div>
+                </div>
+            </div>
+            <i class='bx bx-log-out-circle' id="logout"></i>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Dashboard</h1>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

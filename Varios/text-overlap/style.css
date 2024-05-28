@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background: #4460EF;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: #FFF;
+}
+
+div span{
+    font-size: 15vw;
+    font-weight: 800;
+    text-shadow: -0.08em 0.03em 0.12em #000;
+}
+
+div span:not(:first-child){
+    margin-left: -0.15em;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegación Fija</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #parrafo{
+            border: solid 3px;
+            border-color:black;
+            background-color: aqua;
+            right: 1%;
+            position: fixed;
+            top: 5%;
+        }
+
+        .navbar {
+            background-color: #333;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .content {
+            padding-top: 50px; /* Ajusta el padding superior para evitar que el contenido se superponga con la barra de navegación */
+        }
+    </style>
+
+    <script>
+        window.onscroll = function() {
+            var y = window.scrollY;
+
+            var tema2 = document.getElementById('tema2').getBoundingClientRect();
+            var tema3 = document.getElementById('tema3').getBoundingClientRect();
+
+            console.log(tema2.top);
+
+            var parrafo = document.getElementById('parrafo');
+            var barra = document.querySelector(".navbar");
+
+            if(tema2.top < 65 && tema2.top < tema3.top){
+                parrafo.innerHTML = "TEMA 2";   
+            }
+            
+            if(tema3.top < 65){
+                parrafo.innerHTML = "TEMA 3";   
+            }
+            
+            if(tema2.top > 399){
+                parrafo.innerHTML = "TEMA 1";   
+            }
+        };
+    </script>
+</head>
+
+<body>
+
+    <p id="parrafo">TEMA 1</p>
+
+    <div class="navbar" id="navbar" style.top="-50px">
+        <a href="#">Inicio</a>
+        <a href="#">Acerca</a>
+        <a href="#">Servicios</a>
+        <a href="#">Contacto</a>
+    </div>
+
+    <div class="content">
+        <p>TEMA 1</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        
+        <p id="tema2"><b>TEMA 2 - TEXTO PARA SABER TOP PORQUE QUEREMOS MOSTRAR UNA CAJA DE TITULOOOOOOOOOOOOOO</b></p>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        
+        
+        
+        <p id="tema3"><b>TEMA 3 - TEXTO PARA SABER TOP PORQUE QUEREMOS MOSTRAR UNA CAJA DE TITULOOOOOOOOOOOOOO</b></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab ex porro in voluptatum minus pariatur dolorem voluptatem enim nam beatae, quo voluptates dolor nostrum nihil, vitae est accusamus molestias!</p>
+
+        
+
+    </div>
+</body>
+</html>

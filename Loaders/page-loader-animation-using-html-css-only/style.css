@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #090707;
+}
+
+.loader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(2.5);
+}
+
+.loader .row{
+    display: flex;
+}
+
+
+.row .arrow{
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 21.6px solid #0077b5;
+    margin: 0 -6px;
+    animation: blink 1s infinite;
+    animation-delay: var(--delay);
+    filter: drop-shadow(0 0 18px #0077b5);
+}
+
+.arrow.down{
+    transform: rotate(180deg);
+}
+
+
+@keyframes blink {
+    0%{
+        opacity: 0.1;
+    }
+
+    30%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0.1;
+    }
+}

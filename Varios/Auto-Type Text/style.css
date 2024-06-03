@@ -1,0 +1,23 @@
+/*-------------------- CSS --------------------*/
+body{
+    height: 100vh;
+    background: #022d45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+.container{
+    width: 70%;
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+
+#text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    border-right: 2px solid aliceblue;
+    padding-right: 2px;
+    border-bottom: 1px solid aliceblue;
+    
+}     

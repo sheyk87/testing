@@ -1,0 +1,135 @@
+/*-------------------- CSS --------------------*/
+/*style css*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+:root {
+    --color: #ffbb00;
+}
+
+.container {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+
+}
+
+
+.container:hover {
+    width: 600px;
+}
+
+
+.container .ring {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #3a3a3a;
+    border: 8px solid var(--color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--color), 0 0 60px var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+
+.container:hover .ring {
+    border-radius: 30px;
+    background: linear-gradient(90deg, #925e03, var(--color));
+}
+
+.container .ring .logo {
+    width: 250px;
+    transition: 0.5s; 
+
+}
+
+.container:hover .ring .logo {
+    scale: 0;
+}
+
+
+.container .photo {
+    position: absolute;
+    height: 300px;
+    top: 80%;
+    left: 70%;
+    transform: translate(-50%, -50%) scale(0) rotate(-50deg);
+    transition: 0.5s; 
+
+}
+
+.container:hover .photo {
+    transition-delay: 0.3s;
+    top: 45%;
+    left: 90%;
+    height: 500px;
+    transform: translate(-50%, -50%) scale(1) rotate(15deg);
+}
+
+
+.container .info {
+    position: absolute;
+    left: 30px;
+    width: 300px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+
+.container:hover .info{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+
+.container h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+
+}
+
+.container span{
+    color: white;
+    font-size: 0.8rem;
+    margin: 10px 0;
+
+        
+}
+
+.container a{
+    position: relative;
+    display: inline-block;
+    color: black;
+    background: var(--color);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.container a:hover{
+    box-shadow: 0 0 2px black;
+}

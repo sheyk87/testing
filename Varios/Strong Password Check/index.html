@@ -1,0 +1,29 @@
+<!-- -------------------- HTML -------------------- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="input-area">
+            <input type="text" onkeyup="check()" id="password" placeholder="enter your password">
+            <div class="output">
+                <p>Password must include:</p>
+                <li><span id="length">Minimum 8 characters</span></li>
+                <li><span id="lower">At least one lowercase letter</span></li>
+                <li><span id="upper">At least one uppercase letter</span></li>
+                <li><span id="number">At least one number</span></li>
+                <li><span id="special">At least one special character</span></li>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>      

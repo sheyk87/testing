@@ -1,0 +1,83 @@
+/*-------------------- CSS --------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --blue: #E7F2F8;
+    --aqua: #74BDCB;
+    --salmon: #FFA384;
+    --freesia: #EFE7BC;
+}
+body {
+    min-height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--aqua);
+}
+.container {
+    padding: 30px;
+    position: relative;
+}
+input {
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--salmon);
+    font-size: 1.3rem;
+    outline: none;
+}
+input:focus {
+    border: 2px solid var(--salmon);
+}
+.output {
+    position: absolute;
+    padding: 30px;
+    background: var(--blue);
+    border-radius: 10px;
+    top: -135%;
+    left: 50%;
+    width: 350px;
+    border: 1px solid #0002;
+
+    display: none;
+    opacity: 0;
+    animation: anime 0.5s ease forwards;
+}
+@keyframes anime {
+    to {
+        top: -150%;
+        opacity: 1;
+    }
+}
+
+input:focus + .output {
+    display: block;
+ 
+}
+.output::before {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    width: 30px;
+    aspect-ratio: 1;
+    background: inherit;
+    rotate: 45deg;
+    border-bottom: 1px solid #0002;
+    border-right: 1px solid #0002;
+}
+
+.output p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.output li {
+    margin-left: 20px;
+}
+ .output span {
+    font-size: .9rem;
+    color: red;
+    line-height: 1.2rem;
+ }
